@@ -1,0 +1,2092 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="-1">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,user-scalable=no,viewport-fit=cover">
+<title>ob&nbsp;-&nbsp;elements</title>
+<link rel="stylesheet" type="text/css" href="https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v1/css/common.css?03be" media="all">
+<link rel="apple-touch-icon-precomposed" href="https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/ui/icon_bookmark.png?03be">
+
+
+<style>.caty-body-banner {width: 100%;}</style>
+
+<style>
+* {
+-webkit-touch-callout: none;
+}
+html {
+border: 0;
+}
+body {
+width: 596px;
+background: #faf8f5;
+border: 0;
+}
+*:not(input):not(textarea):not(select),
+input[type=image],
+input[type=file],
+input[type=submit],
+input[type=button],
+input[type=reset] {
+-webkit-user-select: none;
+}
+#top {
+visibility: hidden;
+}
+body::-webkit-scrollbar {
+display: none;
+}
+.web_view .content::-webkit-scrollbar{
+display: none;
+}
+.web_view{
+color: #3c404e;
+max-height: 100%;
+margin: 0 auto;
+padding: 2px 0;
+background: #faf8f5;
+-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+}
+.web_view.transparent{
+background: transparent;
+}
+.web_view .text{
+word-wrap: break-word;
+margin: 0px 32px;
+font-size: 0.75rem;
+}
+
+.web_view h2 {
+font-size: inherit;
+text-align: left;
+background: none;
+width: auto;
+height: auto;
+margin: 10px auto;
+-webkit-box-align: center;
+box-align: center;
+}
+.web_view h2:first-of-type {
+margin: 5px auto 10px;
+}
+
+.web_view h2 .titleBlock{
+padding-left: 16px;
+line-height: 33px; 
+}
+.web_view h2 ul.tabLink{
+position: absolute;
+right: 16px;
+height: 62px;
+font-size: 0.83rem;
+}
+#slider-container-wrapper {
+margin: 10px 0;
+}
+
+.web_view h2 ul.tabLink li a{
+display: block;
+height: 25px;
+width: 96px;
+margin-top: 16px;
+padding: 0;
+padding-top: 8px;
+font-size: 0.66rem;
+line-height: 18px;
+text-decoration: none;
+color:#000;
+text-shadow: 0px 0px 0.5px #000;
+}
+
+.web_view h2 ul.tabLink li a.tabLinkLeft{
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/ui/button/tab_02_01_off.png") no-repeat top left;
+background-size: 96px 32px;
+}
+.web_view h2 ul.tabLink li a.tabLinkLeft._select{
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/ui/button/tab_02_01_on.png") no-repeat top left;
+background-size: 96px 32px;
+color:#fff;
+text-shadow: 0px 0px 3px #000,0px 0px 3px #000,0px 0px 3px #000,0px 0px 3px #000,0px 0px 3px #000;
+}
+
+.web_view h2 ul.tabLink li a.tabLinkCenter{
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/ui/button/tab_02_02_off.png") no-repeat top left;
+background-size: 96px 32px;
+}
+.web_view h2 ul.tabLink li a.tabLinkCenter._select{
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/ui/button/tab_02_02_on.png") no-repeat top left;
+background-size: 96px 32px;
+color:#fff;
+text-shadow: 0px 0px 3px #000,0px 0px 3px #000,0px 0px 3px #000,0px 0px 3px #000,0px 0px 3px #000;
+}
+
+.web_view h2 ul.tabLink li a.tabLinkRight{
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/ui/button/tab_02_03_off.png") no-repeat top left;
+background-size: 95px 32px;
+}
+.web_view h2 ul.tabLink li a.tabLinkRight._select{
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/ui/button/tab_02_03_on.png") no-repeat top left;
+background-size: 95px 32px;
+color:#fff;
+text-shadow: 0px 0px 3px #000,0px 0px 3px #000,0px 0px 3px #000,0px 0px 3px #000,0px 0px 3px #000;
+}
+
+.web_view h2 ul.tabLink li a div{
+height: 20px;
+}
+
+.web_view h3{
+color: #fff;
+margin: 0 auto 32px auto;
+overflow: hidden;
+text-align: left;
+}
+.web_view h3 .titleBlock{
+width:16px;
+height: 62px;
+margin-right: 3px;
+position: relative;
+}
+.web_view h3 .titleBlock img{
+width:16px;
+height: 28px;
+position: absolute;
+bottom: 0;
+left: 0;
+}
+
+.web_view h3 .title{
+width: 854px;
+height: 58px;
+padding-bottom: 5px;
+display: table-cell;
+vertical-align: bottom;
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/ui/frame/line_base_02.png") no-repeat bottom left;
+}
+
+.help .content{
+padding: 0 12px;
+}
+#help {
+background: transparent;
+padding-top: 10px;
+}
+/*折叠面板*/
+.accordion {
+width: 100%;
+margin: auto;
+}
+.accordion:not(:first-child) {
+margin-top: 4px;
+}
+
+/* 父容器 (同时包含父、子、孙容器) */
+.acc-parent {
+color: #393d4c;
+border-style: solid;
+border-width: 6px 8px 4px;
+-moz-border-image: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/help/bg/list_top.png) 12 16 8 fill stretch;
+-webkit-border-image: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/help/bg/list_top.png) 12 16 8 fill stretch;
+-o-border-image: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/help/bg/list_top.png) 12 16 8 fill stretch;
+border-image: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/help/bg/list_top.png) 12 16 8 fill stretch;
+box-sizing: border-box;
+display: -webkit-box;
+display:         box;
+-webkit-box-align: center;
+        box-align: center;
+position: relative;
+padding: 0 1px;
+}
+
+.acc-parent .acc-icon {
+width: 32px;
+margin-right: 4px;
+}
+.acc-parent .acc-icon img {
+width: 100%;
+position: relative;
+top: -2px;
+pointer-events: none;
+}
+.acc-parent .acc-title {
+-webkit-box-flex: 1;
+box-flex: 1;
+}
+.acc-parent .acc-title span{
+text-shadow: 1px 1px 1px #fff,
+-1px -1px 1px #fff,
+1px -1px 1px #fff,
+-1px 1px 1px #fff;
+font-size: 12px;
+}
+
+/* 子以下 */
+.acc-child {
+display: none;
+margin-top: -1px;
+}
+.acc-child dl{
+border-style: solid;
+border-width: 1px 3px 2px;
+-moz-border-image: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/help/bg/list_bg.png) 2 6 4 stretch;
+-webkit-border-image: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/help/bg/list_bg.png) 2 6 4 stretch;
+-o-border-image: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/help/bg/list_bg.png) 2 6 4 stretch;
+border-image: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/help/bg/list_bg.png) 2 6 4 fill stretch;
+}
+.acc-child dl dt{
+display: -webkit-box;
+display:         box;
+padding: 6px;
+-webkit-box-align: center;
+        box-align: center;
+font-size: 11px;
+background: transparent;
+}
+#glossary {
+background: transparent;
+padding-top: 10px;
+}
+.glossary {
+margin: 0 12px;
+}
+.glossary .acc-child dl dt {
+height: auto;
+}
+.acc-child dl dt span {
+display: block;
+position: relative;
+padding-left: 14px;
+font-size: 11px;
+-webkit-box-flex: 1;
+box-flex: 1;
+text-shadow: 1px 1px 1px #fff,
+-1px -1px 1px #fff,
+1px -1px 1px #fff,
+-1px 1px 1px #fff;
+}
+.acc-child dl dt span:before {
+content: '';
+position: absolute;
+top: 4px;
+left: 1px;
+background: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/help/icon/list_icon.png) no-repeat;
+background-size: contain;
+height: 9px;
+width: 9px;
+}
+
+.acc-child dl .detail {
+display: none;
+padding: 4px 6px;
+background: #eff5ff;
+}
+.acc-child dl .textarea {
+color: #393d4c;
+background: #f8f8f8;
+padding: 4px 8px;
+box-sizing: border-box;
+border-radius: 4px;
+margin: 0 -4px;
+box-shadow: 0 0 3px rgba(205,203,216,1) inset;
+font-size: 10px;
+}
+
+/* bottom */
+.accordion:after {
+content: "";
+display: block;
+position: relative;
+z-index: 99;
+margin-top: -10px;
+border-style: solid;
+border-width: 7px;
+-moz-border-image: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/help/bg/list_bottom.png) 0 16 12 stretch;
+-webkit-border-image: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/help/bg/list_bottom.png) 0 16 12 stretch;
+-o-border-image: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/help/bg/list_bottom.png) 0 16 12 stretch;
+border-image: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/help/bg/list_bottom.png) 0 16 12 fill stretch;
+padding: 2px;
+}
+
+/* open / closed 图标 */
+.closed:after {
+content: "";
+display: block;
+background: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/help/icon/list_closed.png) no-repeat;
+background-size: contain;
+width: 20px;
+height: 20px;
+position: relative;
+top: -1px;
+}
+.open:after {
+content: "";
+display: block;
+background: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/help/icon/list_open.png) no-repeat;
+background-size: contain;
+width: 20px;
+height: 20px;
+position: relative;
+top: -1px;
+}
+.info .content {
+padding: 0 10px;
+}
+.announce-slider .slides > li img {
+width: 100%;
+}
+/* Slider */
+
+/* Icons */
+/* Arrows */
+.slick-prev,
+.slick-next {
+font-size: 0;
+line-height: 0;
+
+position: absolute;
+top: 50%;
+
+display: block;
+
+width: 20px;
+height: 20px;
+padding: 0;
+-webkit-transform: translate(0, -50%);
+-ms-transform: translate(0, -50%);
+transform: translate(0, -50%);
+
+cursor: pointer;
+
+color: transparent;
+border: none;
+outline: none;
+background: transparent;
+}
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+color: transparent;
+outline: none;
+background: transparent;
+}
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+opacity: 1;
+}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+opacity: .25;
+}
+
+.slick-prev:before,
+.slick-next:before {
+font-family: 'slick';
+font-size: 20px;
+line-height: 1;
+
+opacity: .75;
+color: white;
+
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev {
+left: -25px;
+}
+[dir='rtl'] .slick-prev {
+right: -25px;
+left: auto;
+}
+.slick-prev:before {
+content: '←';
+}
+[dir='rtl'] .slick-prev:before {
+content: '→';
+}
+
+.slick-next {
+right: -25px;
+}
+[dir='rtl'] .slick-next {
+right: auto;
+left: -25px;
+}
+.slick-next:before {
+content: '→';
+}
+[dir='rtl'] .slick-next:before {
+content: '←';
+}
+
+/* Dots */
+.slick-dotted.slick-slider {
+margin-bottom: 10px;
+}
+
+.slick-dots {
+position: absolute;
+bottom: -8px;
+display: block;
+width: 100%;
+padding: 0;
+margin: 0;
+list-style: none;
+text-align: center;
+}
+.slick-dots li {
+position: relative;
+display: inline-block;
+width: 6px;
+height: 6px;
+margin: 0 2px;
+padding: 0;
+
+cursor: pointer;
+}
+.slick-dots li button {
+font-size: 0;
+line-height: 0;
+display: block;
+width: 6px;
+height: 6px;
+padding: 5px;
+cursor: pointer;
+color: transparent;
+border: 0;
+outline: none;
+background: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/ui/icon/common_dot_banner_off.png) no-repeat;
+background-size: 9px;
+}
+.slick-dots li.slick-active button {
+background: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/ui/icon/common_dot_banner_on.png) no-repeat;
+background-size: 9px;
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+outline: none;
+}
+
+.slick-slider {
+position: relative;
+display: block;
+box-sizing: border-box;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+-webkit-touch-callout: none;
+-khtml-user-select: none;
+-ms-touch-action: pan-y;
+touch-action: pan-y;
+-webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+position: relative;
+display: block;
+overflow: hidden;
+margin: 0;
+padding: 0;
+}
+.slick-list:focus {
+outline: none;
+}
+.slick-list.dragging {
+cursor: pointer;
+cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+-webkit-transform: translate3d(0, 0, 0);
+ -moz-transform: translate3d(0, 0, 0);
+-ms-transform: translate3d(0, 0, 0);
+ -o-transform: translate3d(0, 0, 0);
+transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+position: relative;
+top: 0;
+left: 0;
+
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after {
+display: table;
+
+content: '';
+}
+.slick-track:after {
+clear: both;
+}
+.slick-loading .slick-track {
+visibility: hidden;
+}
+
+.slick-slide {
+display: none;
+float: left;
+
+height: 100%;
+min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+float: right;
+}
+.slick-slide img {
+display: block;
+width: 100%;
+}
+.slick-slide.slick-loading img {
+display: none;
+}
+.slick-slide.dragging img {
+pointer-events: none;
+}
+.slick-initialized .slick-slide {
+display: block;
+}
+.slick-loading .slick-slide {
+visibility: hidden;
+}
+.slick-vertical .slick-slide {
+display: block;
+
+height: auto;
+
+border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+display: none;
+}
+
+#announce-list .announce {
+color: #3c404e;
+border-style: solid;
+border-width: 5px 5px 10px;
+-moz-border-image: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/ui/frame/common_unit_bg.png) 10 10 20 10 stretch;
+-webkit-border-image: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/ui/frame/common_unit_bg.png) 10 10 20 10 stretch;
+-o-border-image: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/ui/frame/common_unit_bg.png) 10 10 20 10 stretch;
+border-image: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/ui/frame/common_unit_bg.png) 10 10 20 10 fill stretch;
+box-sizing: border-box;
+display: block;
+text-decoration: none;
+width: 100%;
+-webkit-transition-property: -webkit-transform;
+-o-transition-property: -o-transform;
+transition-property: transform;
+-webkit-transition-duration: .1s;
+-o-transition-duration: .1s;
+transition-duration: .1s;
+-webkit-transition-timing-function: ease-in-out;
+-o-transition-timing-function: ease-in-out;
+transition-timing-function: ease-in-out;
+-webkit-transform: scale(1);
+margin-bottom: 4px;
+}
+#announce-list .announce:active {
+-webkit-transform: scale(.95);
+-ms-transform: scale(.95);
+-o-transform: scale(.95);
+transform: scale(.95);
+}
+#announce-list .announce .ribbon {
+width: 60px;
+vertical-align: text-bottom;
+}
+#announce-list .announce .inner {
+display: -webkit-box;
+display: box;
+-webkit-box-align: center;
+        box-align: center;
+margin: -4px -4px -7px;
+}
+#announce-list .announce .left {
+-webkit-box-flex: 1;
+box-flex: 1;
+padding: 4px 0;
+}
+#announce-list .announce.no-image .left {
+padding-left: 6px;
+}
+#announce-list .announce .thumbnail {
+width: 124px;
+}
+#announce-list .announce .thumbnail img {
+width: 100%;
+}
+#announce-list .announce .left .data {
+position: relative;
+padding-bottom: 20px;
+}
+#announce-list .announce .left .data .upper {
+line-height: 1;
+}
+#announce-list .announce .left .data .upper .title{
+overflow: hidden;
+line-height: 1.3;
+vertical-align: middle;
+font-size: 14px;
+}
+.title span {
+display: inline-block;
+min-height: 15px;
+padding-left: 70px;
+}
+.announce.announce_image .title_icon_0 {
+height: 2.5em;
+}
+.announce.announce_image .title_icon_1 {
+height: 2.5em;
+}
+.announce.announce_image .title_icon_2 {
+height: 2.5em;
+}
+.announce.announce_image .title_icon_3 {
+height: 2.5em;
+}
+.announce.announce_image .title_icon_4 {
+height: 2.5em;
+}
+.announce.announce_image .title_icon_5 {
+height: 2.5em;
+}
+.announce.announce_image .title_icon_6 {
+height: 2.5em;
+}
+.announce.announce_image .title_icon_7 {
+height: 2.5em;
+}
+.announce .title_icon_0 {
+padding-left: 0;
+}
+.announce .title_icon_1 {
+background: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/ui/icon/common_info_icon_1.png) no-repeat left 2px;
+background-size: 65px 13px;
+display: inline-block;
+}
+.announce .title_icon_2 {
+background: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/ui/icon/common_info_icon_2.png) no-repeat left 2px;
+background-size: 65px 13px;
+display: inline-block;
+}
+.announce .title_icon_3 {
+background: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/ui/icon/common_info_icon_3.png) no-repeat left 2px;
+background-size: 65px 13px;
+display: inline-block;
+}
+.announce .title_icon_4 {
+background: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/ui/icon/common_info_icon_4.png) no-repeat left 2px;
+background-size: 65px 13px;
+display: inline-block;
+}
+.announce .title_icon_5 {
+background: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/ui/icon/common_info_icon_5.png) no-repeat left 2px;
+background-size: 65px 13px;
+display: inline-block;
+}
+.announce .title_icon_6 {
+background: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/ui/icon/common_info_icon_6.png) no-repeat left 2px;
+background-size: 65px 13px;
+display: inline-block;
+}
+.announce .title_icon_7 {
+background: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/ui/icon/common_info_icon_7.png) no-repeat left 2px;
+background-size: 65px 13px;
+display: inline-block;
+}
+
+#announce-list .announce-list {
+margin-top: 10px;
+}
+#announce-list .announce .left .data .downer {
+position: absolute;
+bottom: -1px;
+right: 0;
+width: 100%;
+background: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/ui/frame/line_text_dot.png) repeat-x top;
+display: block;
+text-align: right;
+background-size: 5px;
+height: 13px;
+padding-top: 6px;
+}
+.upper_img_wrapper {
+display: table-cell;
+vertical-align: middle;
+}
+#announce-list .announce .arrow {
+margin: 0 4px 0 6px;
+width: 7px;
+}
+#announce-list .announce .arrow img {
+width: 100%;
+}
+#announce-list .no-news {
+position: fixed;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+display: -webkit-box;
+display:         box;
+-webkit-box-align: center;
+box-align: center;
+text-align: -webkit-center;
+}
+#announce-list .no-news .blank {
+width: 147px;
+}
+#announce-list .network-fail {
+margin: 8px auto;
+text-align: center;
+}
+#announce-list .network-fail img {
+width: 222px;
+}
+#announce-list .more {
+width: 100%;
+display: block;
+margin: 10px auto;
+}
+#announce-list .more {
+width: 100%;
+display: flex;
+height: 26px;
+justify-content: center;
+-webkit-border-image: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/ui/frame/common_unit_bg.png) 10 16 16 fill stretch;
+border-width: 5px 5px 8px;
+border-style: solid;
+box-sizing: border-box;
+vertical-align: middle;
+align-items: center;
+}
+#announce-list .more img {
+width: 18px;
+height: auto;
+}
+#announce-list .more span {
+text-shadow: 0 0 3px #fff;
+margin-left: 3px;
+font-size: 12px;
+}
+
+#announce-list .more:active {
+-webkit-transform: scale(.95);
+-ms-transform: scale(.95);
+-o-transform: scale(.95);
+transform: scale(.95);
+}
+.heading-1,
+.web_view h2.title,
+#announce-detail .h2 {
+text-align: left;
+position: relative;
+padding: 2px 2px 1px;
+margin: 8px 0 10px 16px;
+border-bottom: 1px solid #5f98f1;
+font-size: 14px;
+}
+.heading-1:before,
+.web_view h2.title:before,
+#announce-detail .h2:before {
+content: '';
+display: inline-block;
+width: 16px;
+height: 16px;
+position: absolute;
+left: -14px;
+bottom: -1px;
+background: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/ui/frame/common_head_h2.png) no-repeat left bottom;
+background-size: 15px auto;
+}
+
+
+.heading-2,
+.web_view h4,
+#announce-detail .h3 {
+position: relative;
+padding: 2px;
+margin: 8px 0;
+border-bottom: 1px solid #78a9ec;
+overflow: visible;
+color: black;
+font-size: 11px;
+}
+.heading-2:before,
+.web_view h4:before,
+#announce-detail .h3:before {
+content: '';
+display: inline-block;
+width: 12px;
+height: 11px;
+background: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/ui/frame/common_head_h3.png) no-repeat left bottom;
+background-size: 6px auto;
+background-position: 2px 4px;
+}
+
+
+#announce-detail .h2-wrapper {
+width: 100%;
+box-sizing: border-box;
+display: flex;
+padding: 12px 12px 0;
+background: #faf8f5;
+}
+#announce-detail .border-wrapper {
+width: 100%;
+border-bottom: 1px solid #78a9ec;
+}
+
+#announce-detail .h2-wrapper .title-wrapper {
+width: calc(100% - 47px);
+margin-left: 4px;
+box-sizing: border-box;
+display: inline-block;
+}
+#announce-detail .h2-wrapper .backLink {
+display: inline-block;
+vertical-align: top;
+width: 39px;
+}
+#announce-detail .h2-wrapper .backLink img {
+width: 39px;
+}
+#announce-detail .h2-wrapper .backLink:active {
+-webkit-transform: scale(.95);
+-ms-transform: scale(.95);
+-o-transform: scale(.95);
+transform: scale(.95);
+}
+#announce-detail .h2-wrapper .title-wrapper .ribbon {
+width: 64px;
+vertical-align: text-bottom;
+}
+#announce-detail .h2-wrapper .title-table {
+width: 100%;
+min-height: 35px;
+}
+#announce-detail .title {
+font-size: 14px;
+line-height: 1.3;
+}
+#announce-detail .date.icon_1 {
+padding-left: 70px;
+background: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/ui/icon/common_info_icon_1.png) no-repeat;
+background-size: 65px 13px;
+}
+#announce-detail .date.icon_2 {
+padding-left: 70px;
+background: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/ui/icon/common_info_icon_2.png) no-repeat;
+background-size: 65px 13px;
+}
+#announce-detail .date.icon_3 {
+padding-left: 70px;
+background: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/ui/icon/common_info_icon_3.png) no-repeat;
+background-size: 65px 13px;
+}
+#announce-detail .date.icon_4 {
+padding-left: 70px;
+background: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/ui/icon/common_info_icon_4.png) no-repeat;
+background-size: 65px 13px;
+}
+#announce-detail .date.icon_5 {
+padding-left: 70px;
+background: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/ui/icon/common_info_icon_5.png) no-repeat;
+background-size: 65px 13px;
+}
+#announce-detail .date.icon_6 {
+padding-left: 70px;
+background: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/ui/icon/common_info_icon_6.png) no-repeat;
+background-size: 65px 13px;
+}
+#announce-detail .date.icon_7 {
+padding-left: 70px;
+background: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/ui/icon/common_info_icon_7.png) no-repeat;
+background-size: 65px 13px;
+}
+
+#announce-detail .h2-wrapper .title-wrapper .date {
+text-align: right;
+line-height: 13px;
+margin-bottom: 3px;
+}
+#announce-detail .messages {
+position: relative;
+z-index: 1;
+box-sizing: border-box;
+font-size: 11px;
+padding: 10px 12px 0;
+width: 100%;
+height: auto;
+}
+#announce-detail .messages img.fr-dib {
+max-width: 100%;
+margin-bottom: 10px;
+}
+#announce-detail .messages .h2 {
+margin-top: 0;
+}
+
+#announce-detail,
+#platinum-gacha-index {
+text-shadow: 1px 0px 0px #fff,
+0px 1px 0px #fff,
+-1px 0px 0px #fff,
+0px -1px 0px #fff;
+}
+#platinum-gacha-index figure {
+margin-bottom: 10px;
+}
+#platinum-gacha-index img {
+width: 100%;
+}
+#platinum-gacha-index p {
+margin-bottom: 2rem;
+}
+#platinum-gacha-index ul {
+margin-left: 1rem;
+}
+#platinum-gacha-index ul li{
+text-indent: -1rem;
+padding-left: 1rem;
+margin: .5rem 0;
+list-style-type: none;
+}
+#platinum-gacha-index ul li:before {
+content: "※ ";
+font-size: .8rem;
+}
+.verticallyLong{
+width: 640px;
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/vertically_long/ui/frame/bg.png") repeat-y top left;
+background-size: 640px 68px;
+font-size: 0.75rem;
+}
+
+.submit{
+width: 194px;
+height: 64px;
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/vertically_long/ui/button/button_red_01.png") no-repeat top left;
+background-size: 194px 64px;
+}
+
+.submit._hover{
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/vertically_long/ui/button/button_red_01_black.png") no-repeat top left;
+}
+
+.chkbox{
+width: 64px;
+height: 64px;
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/vertically_long/ui/button/button_check_off.png") no-repeat top left;
+background-size: 64px 64px;
+display: inline-block;
+cursor: pointer;
+overflow: hidden;
+}
+
+.chkbox input{
+display: none;
+}
+
+.chkbox._hover{
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/vertically_long/ui/button/button_check_off_black.png") no-repeat top left;
+}
+
+.chkbox.checked{
+width: 64px;
+height: 64px;
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/vertically_long/ui/button/button_check_on.png") no-repeat top left;
+background-size: 64px 64px;
+}
+
+.chkbox.checked._hover{
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/vertically_long/ui/button/button_check_on_black.png") no-repeat top left;
+}
+
+.campaign_list{
+width: 196px;
+height: 34px;
+display: inline-block;
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/vertically_long/ui/button/button_white_03.png") no-repeat bottom left;
+background-size: 196px 34px;
+}
+
+.campaign_list._hover{
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/vertically_long/ui/button/button_white_03_black.png") no-repeat top left;
+}
+
+.campaign_backLink{
+width: 388px;
+height: 64px;
+display: inline-block;
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/vertically_long/ui/button/button_white_05.png") no-repeat bottom left;
+background-size: 388px 64px;
+}
+
+.campaign_backLink._hover{
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/vertically_long/ui/button/button_white_05_black.png") no-repeat top left;
+}
+
+.invite_anker{
+width: 280px;
+height: 64px;
+display: inline-block;
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/vertically_long/ui/button/button_white_01.png") no-repeat bottom left;
+background-size: 280px 64px;
+}
+
+.invite_anker._hover{
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/vertically_long/ui/button/button_white_01_black.png") no-repeat top left;
+}
+
+.serial_anker{
+width: 280px;
+height: 64px;
+display: inline-block;
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/vertically_long/ui/button/button_white_02.png") no-repeat bottom left;
+background-size: 280px 64px;
+}
+
+.serial_anker._hover{
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/vertically_long/ui/button/button_white_02_black.png") no-repeat top left;
+}
+
+.page_top_anker{
+width: 388px;
+height: 64px;
+display: inline-block;
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/vertically_long/ui/button/button_white_06.png") no-repeat bottom left;
+background-size: 388px 64px;
+}
+
+.page_top_anker._hover{
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/vertically_long/ui/button/button_white_06_black.png") no-repeat top left;
+}
+
+.rights .content {
+margin: 0 12px;
+}
+
+.rights .section {
+margin-top: 15px;
+padding-top: 5px;
+border-top: 1px solid #5f98f1;
+}
+.rights p {
+margin-top: 10px;
+}
+.agreement-wrapper {
+margin: 0 12px;
+}
+.agreement-wrapper p,
+.agreement-wrapper li {
+margin-top: 14px;
+}
+.agreement-wrapper li {
+list-style: decimal;
+list-style-type: decimal;
+list-style-position: inside;
+margin-left: .5em;
+text-indent: -1em;
+padding-left: 1em;
+}
+.agreement-wrapper li li{
+list-style-type: none;
+list-style-position: inside;
+counter-increment: cnt;
+margin-left: .5em;
+}
+.agreement-wrapper li li:before{
+display: marker;
+content: "(" counter(cnt) ") ";
+}
+.agreement-wrapper li dl dt {
+margin-left: 1rem;
+}
+.agreement-wrapper li dl dt {
+display: inline;
+}
+.agreement-wrapper li dl dd {
+margin-left: 1rem;
+display: inline;
+}
+.agreement-wrapper .right {
+text-align: right;
+}
+.privacypilicy-wrapper {
+margin: 0 12px;
+}
+.privacypilicy-wrapper p {
+margin-top: 10px;
+}
+.privacypilicy-wrapper ol li{
+list-style: decimal;
+list-style-type: decimal;
+list-style-position: outside;
+}
+.privacypilicy-wrapper ul li{
+list-style: disc;
+list-style-type: disc;
+list-style-position: outside;
+}
+.privacypilicy-wrapper ol li ul li ol li{
+list-style: decimal;
+list-style-type: decimal;
+list-style-position: outside;
+}
+.privacypilicy-wrapper li {
+margin-left: 2rem;
+}
+.privacypilicy-wrapper .date {
+text-align: right;
+}
+.fundsettlement-wrapper {
+margin: 0 12px;
+}
+.fundsettlement-wrapper p {
+margin-bottom: 10px;
+}
+.fundsettlement-wrapper h3 {
+text-align: left;
+background: none;
+width: auto;
+height: auto;
+color: inherit;
+margin: auto;
+}
+.fundsettlement-wrapper dl {
+margin-bottom: 10px;
+}
+.fundsettlement-wrapper dl dt {
+width: 25%;
+display: inline-block;
+}
+.fundsettlement-wrapper dl dd {
+width: 73%;
+display: inline-block;
+}
+.fundsettlement-wrapper .date {
+text-align: right;
+}
+.tradelaw-wrapper {
+margin: 0 12px;
+}
+.tradelaw-wrapper p {
+margin-top: 10px;
+}
+.tradelaw-wrapper .date {
+text-align: right;
+}
+.providespercent-gatcha {
+padding: 0 12px;
+color: #3c404e;
+}
+.providespercent-gatcha .odds_list {
+width: 160px;
+font-size: 11px;
+}
+.providespercent-gatcha .block {
+margin-bottom: 15px;
+}
+.providespercent-gatcha .odds_list dt {
+display: inline-block;
+width: 90px;
+}
+.providespercent-gatcha .odds_list dd {
+display: inline-block;
+text-align: right;
+width: 70px;
+}
+.providespercent-gatcha .description,
+.providespercent-gatcha .para {
+font-size: 11px;
+margin: 15px 0;
+}
+.providespercent-gatcha .provides-table table {
+table-layout: fixed;
+}
+.providespercent-gatcha .provides-table th {
+color: #fff;
+font-size: 12px;
+line-height: 22px;
+text-align: center;
+background: #8acbfb;
+text-shadow: 1px 1px 1px #276ccb, -1px -1px 1px #276ccb, 1px -1px 1px #276ccb, -1px 1px 1px #276ccb;
+border-right: 1px solid #5f98f1;
+border-bottom: 1px solid #5f98f1;
+}
+.providespercent-gatcha .provides-table .border {
+border-bottom: 2px solid #5f98f1;
+}
+.providespercent-gatcha .provides-table .border:last-child {
+border-bottom: none;
+}
+
+.providespercent-gatcha .provides-table td {
+color: #3c404e;
+font-size: 12px;
+padding: 0 4px;
+height: 20px;
+border-right: 1px solid #5f98f1;
+}
+.providespercent-gatcha .provides-table .tbl-rarity {
+height: 1px;
+}
+.providespercent-gatcha .rarity {
+position: relative;
+text-align: left;
+}
+.providespercent-gatcha .image {
+display: inline-block;
+padding-left: 3px;
+}
+.providespercent-gatcha .image img {
+width: 60px;
+}
+
+
+.providespercent-gatcha .position,
+.providespercent-gatcha .odds {
+text-align: center;
+}
+.providespercent-gatcha .provides-table {
+border: solid 2px #5f98f1;
+border-radius: 10px;
+margin-bottom: 15px;
+overflow: hidden;
+}
+
+.providespercent-gatcha .provides-table table {
+border: none;
+}
+.providespercent-gatcha .provides-table th:last-child,
+.providespercent-gatcha .provides-table td:last-child{
+border-right: none;
+}
+.providespercent-gatcha .provides-table tr:nth-child(even) {
+background: #fbf9f7;
+}
+
+.providespercent-gatcha .provides-table tr:nth-child(odd) {
+background: #e2f3ff;
+}
+
+.goldset1 {
+padding: 10px 12px;
+}
+.goldset1 .icon {
+margin: 5px auto;
+display: block;
+text-align: center;
+}
+
+table {
+border: solid 2px #ebf1fd; 
+width: 100%;
+}
+
+.provides-table th {
+color: #fff;
+font-size: 11px;
+line-height: 16px;
+height: 22px;
+text-align: center;
+background: #8acbfb;
+text-shadow: 1px 1px 1px #276ccb, -1px -1px 1px #276ccb, 1px -1px 1px #276ccb, -1px 1px 1px #276ccb;
+border-right: 1px solid #5f98f1;
+white-space: nowrap;
+}
+
+.provides-table td {
+color: #3c404e;
+font-size: 11px;
+padding: 0 4px;
+text-align: right;
+height: 20px;
+border-right: 1px solid #5f98f1;
+white-space: nowrap;
+}
+.goldset1 li {
+display: inline-block;
+width: 50%;
+}
+
+.provides-table {
+border: solid 2px #5f98f1;
+border-radius: 10px;
+overflow: hidden;
+}
+
+.provides-table table {
+border: none;
+}
+.provides-table th:last-child,
+.provides-table td:last-child{
+border-right: none;
+}
+.provides-table tr:nth-child(even) {
+background: #fbf9f7;
+}
+
+.provides-table tr:nth-child(odd) {
+background: #e2f3ff;
+}
+.goldset1-para {
+font-size: 11px;
+margin: 8px 0;
+color: #3c404c;
+}
+.goldset2 {
+padding: 12px;
+}
+.goldset2 table {
+table-layout: fixed;
+}
+.goldset2 td {
+font-size: 10px;
+text-align: left;
+}
+.goldset2 td span {
+display: block;
+transform: scale(0.85);
+transform-origin: left center;
+}
+.gacha {
+margin: 5px 12px;
+}
+.gacha ul {
+margin: 5px 5px 5px 2rem;
+}
+.gacha ul li {
+list-style-type: disc;
+}
+.gacha.index {
+text-shadow: 1px 0px 0px #fff,
+0px 1px 0px #fff,
+-1px 0px 0px #fff,
+0px -1px 0px #fff;
+}
+
+
+.new-character_upper {
+position: relative;
+margin-bottom: 5px;
+min-height: 156px;
+}
+.new-character_image {
+position: absolute;
+top: 0;
+left: 0;
+z-index: 1;
+width: 320px;
+}
+.new-character_image img {
+width: 320px;
+}
+
+.new-character_status {
+position: relative;
+z-index: 2;
+padding-left: 267px;
+}
+.new-character_status .new-character_position {
+margin-bottom: 3px;
+}
+.new-character_status .new-character_position img {
+width: 60px;
+}
+.new-character_status table {
+border: 0;
+width: 270px;
+}
+.new-character_status table,
+.new-character_status tr,
+.new-character_status td {
+border-collapse: collapse;
+border-spacing: 0;
+padding: 0;
+}
+.new-character_status-dl {
+padding-bottom: 3px;
+}
+.new-character_status-item {
+font-size: 11px;
+background: #5f98f1;
+color: white;
+display: inline-block;
+width: 50%;
+white-space: nowrap;
+border-radius: 4px;
+text-shadow: none;
+padding: 3px 0 2px 3px;
+box-sizing: border-box;
+line-height: 1;
+}
+.new-character_status-num {
+font-size: 12px;
+width: 47%;
+border-bottom: dotted 1px #5f98f1;
+color: black;
+text-align: right;
+display: inline-block;
+line-height: 1;
+}
+.new-character_caution {
+text-shadow: 1px 1px 1px #fff,
+-1px -1px 1px #fff,
+1px -1px 1px #fff,
+-1px 1px 1px #fff;
+color: #E9413C;
+margin-bottom: 2px;
+}
+.new-character_caution img {
+width: 12px;
+height: 12px;
+vertical-align: top;
+margin-right: 2px;
+display: inline-block;
+}
+.new-character_caution span {
+vertical-align: top;
+line-height: 13px;
+}
+.h5 {
+padding: 0;
+margin: 0;
+font-size: 13px;
+background: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/ui/frame/line_text_dot.png) repeat-x bottom;
+background-size: 6px;
+margin-bottom: 4px;
+line-height: 1.7;
+}
+.mt-12 {
+font-size: 11px;
+line-height: 1.2;
+}
+.new-character_under {
+margin-bottom: 30px;
+}
+.new-character_under li {
+margin-bottom: 10px;
+}
+.new-character_under .h5 {
+margin-bottom: 8px;
+padding-left: 3px;
+}
+.new-character_under .new-character_list dt {
+display: inline-block;
+width: 54px;
+padding: 0 8px 0 4px;
+box-sizing: border-box;
+vertical-align: middle;
+}
+.new-character_under .new-character_list dt img {
+width: 42px;
+height: 42px;
+}
+.new-character_under .new-character_list dd {
+display: inline-block;
+max-width: 513px;
+font-size: 11px;
+vertical-align: middle;
+line-height: 1.2;
+}
+
+.season_h1 {
+text-shadow: 1px 1px 1px #fff,      -1px -1px 1px #fff,      1px -1px 1px #fff,      -1px 1px 1px #fff;
+text-align: center;
+font-size: 13px;
+font-weight: bold;
+line-height: 1.2
+}
+
+.season_hr {
+border: none;
+height: 5px;
+margin: 6px;
+background: url(https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/ui/frame/line_text_dot.png) repeat-x top;
+background-size: 5px;
+}
+
+.season_h2 {
+margin: 0 2px 8px;
+border-bottom: 1px solid #78a9ec;
+font-size: 13px;
+text-shadow: 1px 1px 1px #fff, -1px -1px 1px #fff, 1px -1px 1px #fff, -1px 1px 1px #fff;
+text-align: left;
+font-weight: bold;
+color: #2960af;
+}
+.season_h2:before {
+content: '';
+width: 6px;
+height: 7px;
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/ui/frame/common_head_h3.png") no-repeat;
+background-size: contain;
+display: inline-block;
+vertical-align: middle;
+margin: -3px 3px 0;
+overflow: visible;
+}
+.season_h3 {
+position: relative;
+padding: 2px;
+overflow: visible;
+font-size: 11px;
+text-shadow: 1px 1px 1px #fff, -1px -1px 1px #fff, 1px -1px 1px #fff, -1px 1px 1px #fff;
+text-align: left;
+font-weight: bold;
+color: #2960af;
+}
+.season_icon01 {
+padding-left: 18px;
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/jewel_store/jewel_pack_icon1.png") no-repeat;
+background-size: 15px auto;
+background-position: 1px center;
+font-size: 13px;
+padding-top: 1px;
+}
+.season_icon02 {
+padding-left: 18px;
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/jewel_store/jewel_pack_icon2.png") no-repeat;
+background-size: 15px auto;
+background-position: 1px center;
+font-size: 13px;
+padding-top: 1px;
+}
+.season_icon03 {
+padding-left: 18px;
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/jewel_store/jewel_pack_icon3.png") no-repeat;
+background-size: 15px auto;
+background-position: 1px center;
+font-size: 13px;
+padding-top: 1px;
+}
+.season_set {
+margin-bottom: 20px;
+}
+.season_text {
+font-size: 13px;
+}
+
+.season_list {
+text-shadow: 1px 1px 1px #fff, -1px -1px 1px #fff, 1px -1px 1px #fff, -1px 1px 1px #fff;
+text-align: left;
+font-size: 11px;
+font-weight: bold;
+margin-bottom: 20px;
+}
+
+.season_list .indentation {
+padding-left: 2em;
+}
+
+
+.season_list li {
+padding-left: 1em;
+text-indent: -1em;
+}
+
+.season_img {
+text-align: center;
+}
+
+.season_img img {
+width: 138px;
+}
+
+.season_list .example {
+margin: 10px 0;
+}
+
+.season_list .description {
+text-indent: 0;
+}
+.csv {
+color: #3c404e;
+}
+.csv h4 {
+position: relative;
+padding-left: 10px;
+margin: 0 1px 5px;
+border-bottom: 1px solid #78a9ec;
+text-shadow: 1px 1px 1px #fff, -1px -1px 1px #fff, 1px -1px 1px #fff, -1px 1px 1px #fff;
+text-align: left;
+color: #2960af;
+}
+.csv h4:before {
+content: '';
+display: block;
+width: 6px;
+height: 7px;
+position: absolute;
+top: 6px;
+left: 2px;
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/ui/frame/common_head_h3.png") no-repeat;
+background-size: 6px auto;
+}
+.csv .b {
+font-weight: bold;
+}
+.csv .st {
+color: #e78609;
+}
+.csv .ca {
+color: #e73c2b;
+}
+.csv img {
+margin-bottom: 10px;
+}
+.csv img:first-of-type {
+max-width: 100%;
+}
+.csv .red {
+color: red;
+}
+#cartoon {
+background-color: transparent;
+color: #000;
+width: 640px;
+}
+#cartoon #wrapper {
+background-image: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/cartoon/bg_default.png");
+background-repeat: no-repeat;
+background-size: 252px;
+background-position: 2px 2px;
+width: 610px;
+height: 305px;
+margin: 0 auto;
+display: none;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+#cartoon #inner {
+height: inherit;
+padding: 2px 2px 3px;
+box-sizing: border-box;
+position: relative;
+display: -webkit-flex;
+display: flex;
+}
+#cartoon #inner::before {
+content: '';
+position: absolute;
+top: 0;right: 0;bottom: 0;left: 0;
+z-index: -1;
+border-image: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/cartoon/bg_wrapper.png") 24;
+border-width: 10px;
+border-style: solid;
+background-color: #f9f7f5;
+border-radius: 0 6px 6px 0;
+}
+#cartoon #wrapper #latest {
+position: relative;
+z-index: 5;
+width: 235px;
+}
+#cartoon #wrapper #latest .main_title {
+}
+#cartoon #wrapper #latest .main_title img {
+width: 235px;
+}
+#cartoon #wrapper #latest .latest_item {
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/cartoon/bg_book.png") no-repeat;
+background-size: 198px;
+width: 198px;
+height: 143px;
+margin: -11px auto 3px;
+box-sizing: border-box;
+padding-top: 24px;
+}
+#cartoon #wrapper #latest .latest_item a {
+display: block;
+position: relative;
+margin: 0 auto;
+width: 110px;
+padding: 2px;
+box-sizing: border-box;
+background: linear-gradient(#ffd672 4%, #f7be45 83%);
+border-radius: 6px;
+box-shadow: 0 2px 0 #b1b0a8;
+}
+#cartoon #wrapper #latest .latest_item a::after {
+content: '';
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/cartoon/ttl_new.png") no-repeat;
+background-size: 90px;
+width: 90px;
+height: 18px;
+position: absolute;
+left: 50%;
+bottom: 2px;
+transform: translateX(-50%);
+}
+#cartoon #wrapper #latest .thumbnail img {
+width: 100%;
+border-radius: 6px;
+}
+#cartoon #wrapper #latest .cartoon_title {
+position: relative;
+margin-bottom: 15px;
+}
+#cartoon #wrapper #latest .cartoon_title .title_text {
+background-repeat: no-repeat;
+background-size: 160px;
+width: 160px;
+height: 34px;
+margin: 0 auto;
+text-align: center;
+color: #fff9cf;
+padding-top: 7px;
+box-sizing: border-box;
+font-size: 10px;
+}
+#cartoon #wrapper #latest .cartoon_title .chara {
+position: absolute;
+top: -60px;
+left: 0;
+right: 0;
+display: flex;
+justify-content: space-between;
+}
+#cartoon #wrapper #latest .cartoon_title .chara_l {
+width: 64px;
+height: 90px;
+}
+#cartoon #wrapper #latest .cartoon_title .chara_r {
+width: 70px;
+height: 90px;
+margin-right: -8px;
+}
+#cartoon #wrapper #latest .btn_from_first {
+width: 138px;
+margin: 0 auto;
+}
+#cartoon #wrapper #latest .btn_from_first img {
+width: 100%;
+}
+#cartoon #wrapper #contents {
+flex: 1;
+display: -webkit-flex;
+display: -ms-flex;
+display: flex;
+flex-direction: column;
+box-sizing: border-box;
+padding: 9px 12px 9px 0;
+}
+#cartoon #wrapper #contents .network-fail {
+position: relative;
+width: 100%;
+height: 100%;
+}
+#cartoon #wrapper #contents .network-fail img {
+position: absolute;
+width: 222px;
+top: 50%;
+left: calc(50% + 10px);
+transform: translate(-50%, -50%);
+}
+#cartoon #wrapper #pager_list {
+display: none;
+font-size: 0;
+color: transparent;
+background: linear-gradient(#8787a9, #6e8dd7);
+box-shadow: 0 2px 0 #b4bccf;
+border-radius: 10px;
+padding: 1px;
+margin-bottom: 10px;
+}
+#cartoon #wrapper #pager_list div,
+#cartoon #wrapper #pager_list ul,
+#cartoon #wrapper #pager_list li {
+display: inline-block;
+vertical-align: top;
+}
+#cartoon #wrapper #pager_list a {
+position: relative;
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/cartoon/bg_pager_off.png") repeat-x;
+background-size: 2px 18px;
+display: block;
+color: transparent;
+height: 18px;
+line-height: 18px;
+}
+#cartoon #wrapper #pager_list a::after {
+content: '';
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+#cartoon #wrapper #pager_list li a {
+width: 57px;
+font-size: 10px;
+color: #3c404e;
+text-align: center;
+box-sizing: border-box;
+text-decoration: none;
+}
+#cartoon #wrapper #pager_list li a.current {
+background-image: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/cartoon/bg_pager_on.png");
+color: #fefeff;
+}
+#cartoon #wrapper #pager_list .next_last,
+#cartoon #wrapper #pager_list .next,
+#cartoon #wrapper #pager_list li,
+#cartoon #wrapper #pager_list .prev {
+padding-right: 1px;
+}
+#cartoon #wrapper #pager_list .next_last a {
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/cartoon/bg_pager_left_off.png") repeat-x;
+background-size: 49px;
+width: 45px;
+border-radius: 9px 0 0 9px;
+}
+#cartoon #wrapper #pager_list .next_last a::after {
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/cartoon/ico_double_off.png") no-repeat;
+background-size: 11px;
+width: 11px;
+height: 7px;
+}
+
+#cartoon #wrapper #pager_list .next a,
+#cartoon #wrapper #pager_list .prev a {
+width: 45px;
+}
+#cartoon #wrapper #pager_list .next a::after {
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/cartoon/ico_single_off.png") no-repeat;
+background-size: 5px;
+width: 5px;
+height: 7px;
+}
+#cartoon #wrapper #pager_list .prev a::after {
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/cartoon/ico_single_off.png") no-repeat;
+background-size: 5px;
+transform: scaleX(-1) translate(50%, -50%);
+width: 5px;
+height: 7px;
+}
+#cartoon #wrapper #pager_list .prev_first a {
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/cartoon/bg_pager_right_off.png") repeat-x;
+background-size: 49px;
+width: 45px;
+border-radius: 0 9px 9px 0;
+}
+#cartoon #wrapper #pager_list .prev_first a::after {
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/cartoon/ico_double_off.png") no-repeat;
+background-size: 11px;
+transform: scaleX(-1) translate(50%, -50%);
+width: 11px;
+height: 7px;
+}
+
+#cartoon #wrapper #items {
+display: none;
+flex: 1;
+overflow-y: scroll;
+-webkit-overflow-scrolling: touch;
+box-sizing: border-box;
+padding: 8px 0 0 8px;
+box-shadow: 0 0 2px #d1d1dd inset;
+border-radius: 4px;
+border: 1px solid #d1d1dd;
+font-size: 0;
+}
+#cartoon #wrapper #items .item {
+display: inline-block;
+border-radius: 6px;
+background: linear-gradient(#8787a9, #6e8dd7);
+box-shadow: 0 2px 0 #b4bccf;
+padding: 1px;
+margin: 0 8px 10px 0;
+}
+#cartoon #wrapper #items .item a {
+position: relative;
+display: block;
+border-radius: 6px;
+background: #fff;
+font-size: 12px;
+}
+#cartoon #wrapper #items .item a .thumbnail img {
+width: 106px;
+border-radius: 6px;
+vertical-align: top;
+}
+#cartoon #wrapper #items .item a .title {
+position: absolute;
+left: 0;
+right: 0;
+bottom: 3px;
+text-align: center;
+line-height: 1;
+color: #1f5988;
+}
+#cartoon #detail {
+width: 100%;
+position: relative;
+}
+#cartoon #detail .network-fail {
+text-align: center;
+}
+#cartoon #detail .network-fail img {
+width: 222px;
+}
+
+#cartoon #detail .controls {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+}
+#cartoon #detail .controls .btn_next {
+position: absolute;
+top: 122px;
+left: 16px;
+}
+#cartoon #detail .controls .btn_prev {
+position: absolute;
+top: 122px;
+right: 16px;
+}
+#cartoon #detail .controls img {
+width: 27px;
+}
+#cartoon #detail .main_cartoon {
+margin-bottom: 15px;
+}
+#cartoon #detail .main_cartoon img {
+display: block;
+width: 532px;
+margin: 0 auto;
+}
+#cartoon #detail #pager_detail {
+width: 532px;
+font-size: 0;
+color: transparent;
+background: linear-gradient(#8787a9, #6e8dd7);
+box-shadow: 0 2px 0 #b4bccf;
+border-radius: 10px;
+padding: 1px;
+margin: 0 auto 32px;
+}
+#cartoon #detail #pager_detail div,
+#cartoon #detail #pager_detail ul,
+#cartoon #detail #pager_detail li {
+display: inline-block;
+vertical-align: top;
+}
+#cartoon #detail #pager_detail a {
+position: relative;
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/cartoon/bg_pager_off.png") repeat-x;
+background-size: 2px 18px;
+display: block;
+color: transparent;
+height: 18px;
+line-height: 18px;
+}
+#cartoon #detail #pager_detail a::after {
+content: '';
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+#cartoon #detail #pager_detail li a {
+width: 66px;
+font-size: 10px;
+color: #3c404e;
+text-align: center;
+box-sizing: border-box;
+text-decoration: none;
+}
+#cartoon #detail #pager_detail li a.current {
+background-image: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/cartoon/bg_pager_on.png");
+color: #fefeff;
+}
+#cartoon #detail #pager_detail .next_last,
+#cartoon #detail #pager_detail .next,
+#cartoon #detail #pager_detail li,
+#cartoon #detail #pager_detail .prev {
+padding-right: 1px;
+}
+#cartoon #detail #pager_detail .next_last a {
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/cartoon/bg_pager_left_off.png") repeat-x;
+background-size: 49px;
+width: 49px;
+border-radius: 9px 0 0 9px;
+}
+#cartoon #detail #pager_detail .next_last a::after {
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/cartoon/ico_double_off.png") no-repeat;
+background-size: 11px;
+width: 11px;
+height: 7px;
+}
+
+#cartoon #detail #pager_detail .next a,
+#cartoon #detail #pager_detail .prev a {
+width: 50px;
+}
+#cartoon #detail #pager_detail .next a::after {
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/cartoon/ico_single_off.png") no-repeat;
+background-size: 5px;
+width: 5px;
+height: 7px;
+}
+#cartoon #detail #pager_detail .prev a::after {
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/cartoon/ico_single_off.png") no-repeat;
+background-size: 5px;
+transform: scaleX(-1) translate(50%, -50%);
+width: 5px;
+height: 7px;
+}
+#cartoon #detail #pager_detail .prev_first a {
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/cartoon/bg_pager_right_off.png") repeat-x;
+background-size: 49px;
+width: 45px;
+border-radius: 0 9px 9px 0;
+}
+#cartoon #detail #pager_detail .prev_first a::after {
+background: url("https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v5/image/cartoon/ico_double_off.png") no-repeat;
+background-size: 11px;
+transform: scaleX(-1) translate(50%, -50%);
+width: 11px;
+height: 7px;
+}
+@media screen and (max-width: 595px) {
+#announce-detail .new-character_status .new-character_caution {
+font-size: 10px;
+}
+#announce-detail .new-character_status .h5 {
+font-size: 12px;
+line-height: 1.5;
+}
+#announce-detail .new-character_status #comment.mt-12 {
+font-size: 10px;
+}
+}
+
+</style>
+<script src="https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v1/js/jquery-1.9.1.min.js?03be" type="text/javascript"></script>
+<script src="https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v1/js/jquery.flexslider.js?03be" type="text/javascript"></script>
+<script src="https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v1/js/common.js?03be" type="text/javascript"></script>
+<script src="https://l3-prod-patch-gzlj.bilibiligame.net/webstatic/v1/js/banner.js?03be" type="text/javascript"></script>
+</head>
+
+<body id="information" >
+<div id="top" class="page_container">
+<a name="top" id="top"></a>
+</div>
+</body>
+</html>
