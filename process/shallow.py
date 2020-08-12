@@ -4,6 +4,11 @@ import hashlib
 from Crypto.Cipher import AES
 
 
+def debase(s: str):
+    b = base64.b64decode(s)
+    return b[:-32], b[-32:]
+
+
 def info(s: str):
     b = base64.b64decode(s)
     print(f'Decode length: {len(b)}')

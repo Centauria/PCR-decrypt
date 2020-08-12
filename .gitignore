@@ -174,3 +174,5 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
+# Middle result
+data
