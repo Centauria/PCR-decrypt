@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import argparse
-from process import info
+from process import info, cipher
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
@@ -8,4 +8,6 @@ if __name__ == '__main__':
     args = parser.parse_args()
     
     with open(args.input) as f:
-        info(f.read())
+        s = f.read()
+        info(s)
+        cipher(s)

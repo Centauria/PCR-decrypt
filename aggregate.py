@@ -15,4 +15,5 @@ if __name__ == '__main__':
             file_path = os.path.join(current, file)
             print(f'Processing file {file_path}')
             with open(file_path, encoding='utf-8') as f:
-                info(f.read())
+                s = f.read()
+                info(s)

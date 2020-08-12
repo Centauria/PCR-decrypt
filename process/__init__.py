@@ -1,2 +1,2 @@
 # -*- coding: utf-8 -*-
-from .shallow import info
+from .shallow import info, cipher
