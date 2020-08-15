@@ -9,12 +9,12 @@ if __name__ == '__main__':
     parser.add_argument('input')
     parser.add_argument('output')
     args = parser.parse_args()
-    
+
     b_dir = os.path.join(args.output, 'bin')
     k_dir = os.path.join(args.output, 'key')
     os.makedirs(b_dir, exist_ok=True)
     os.makedirs(k_dir, exist_ok=True)
-    
+
     index = 1
     for current, dirs, files in os.walk(args.input):
         for file in files:
@@ -26,7 +26,7 @@ if __name__ == '__main__':
                 except UnicodeDecodeError:
                     print('Failed')
                     continue
-                if os.linesep in s:
+                if os.linesep in s or '{' in s:
                     print('Failed')
                     continue
                 b, k = debase(s)
